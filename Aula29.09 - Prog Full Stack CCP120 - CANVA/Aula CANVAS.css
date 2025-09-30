@@ -1,0 +1,14 @@
+#canvas{
+    background-color: #9CFCD4;
+    margin: 0;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    width: 600px;
+    height: 600px;
+    background: #9CFCD4;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
