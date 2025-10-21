@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<h1> Este eh um exemplo de Console log</h1>
+
+<script type = "text/javascript"> 
+
+// Exercicio - Foi realizada uma pesquisa entre os habitantes de uma dada região. Foram recolhidos os dados de idade, sexo (M/F) e salário.
+// Construa um programa em JavaScript que informe:
+// a média de salário do grupo; 
+// maior e menor idade do grupo; 
+// quantidade de mulheres com salário até R$5000,00.
+
+let salarios = [];
+let idades = [];
+let sexos = [];
+let a = 1;
+
+while (a === 1) {
+    let idade = parseInt(prompt("Digite a idade (número negativo para encerrar): "));
+    
+    if (idade < 0) {
+        a = 0;
+        break;
+    }
+    
+    let sexo = prompt("Digite o sexo (M/F): ").toUpperCase();
+    
+    let salario = parseFloat(prompt("Digite o salário: "));
+    
+    idades.push(idade);
+    sexos.push(sexo);
+    salarios.push(salario);
+}
+
+// Calcula média dos salários
+let somaSalarios = 0;
+for (let i = 0; i < salarios.length; i++) {
+    somaSalarios += salarios[i];
+}
+let mediaSalarios = salarios.length > 0 ? somaSalarios / salarios.length : 0;
+
+// Encontra maior e menor idade
+let maiorIdade = idades[0];
+let menorIdade = idades[0];
+for (let i = 1; i < idades.length; i++) {
+    if (idades[i] > maiorIdade) {
+        maiorIdade = idades[i];
+    }
+    if (idades[i] < menorIdade) {
+        menorIdade = idades[i];
+    }
+}
+
+// Conta mulheres com salário até 5000
+let mulheresSalarioAte5000 = 0;
+for (let i = 0; i < sexos.length; i++) {
+    if (sexos[i] === "F" && salarios[i] <= 5000) {
+        mulheresSalarioAte5000++;
+    }
+}
+
+// Mostra os resultados
+window.alert("Média dos salários: R$ " + mediaSalarios.toFixed(2));
+window.alert("Maior idade: " + maiorIdade);
+window.alert("Menor idade: " + menorIdade);
+window.alert("Quantidade de mulheres com salário até R$5000,00: " + mulheresSalarioAte5000);
+
+
+        
+    
+
+
+
+
+
+
+
+
+</script>
+
+<!-- let i = 0;
+
+while(i<3){
+    window.alert(i);
+
+    i++;
+} -->
+
+<!-- Exercicio - Faça um programa em JavaScript que leia um número inteiro positivo e mostre todos os números a partir dele até zero (decrescente).  
+
+//     let entrada = prompt("Entre com os dados")
+//     let entrada_int = parseInt(entrada)
+//     let stringResultado = "";
+    
+//     while(entrada_int > 0){
+//         stringResultado = stringResultado + " " + String(entrada_int);
+//         entrada_int = entrada_int - 1;
+//     };
+//     window.alert(stringResultado);
+//     window.alert("Seu numero é: " + stringResultado) -->
+
+
+
+
+</body>
+</html>

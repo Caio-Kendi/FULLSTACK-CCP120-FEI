@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Jogo de Adivinhação</title>
+  <style>
+    body {
+      background-color: #f0f0f0; /* fundo */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+    }
+    #game {
+      text-align: center;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+    input {
+      padding: 10px;
+      font-size: 16px;
+      width: 80px;
+      text-align: center;
+    }
+    button {
+      padding: 10px;
+      margin-left: 5px;
+      cursor: pointer;
+    }
+    #feedback {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div id="game">
+    <h2>Adivinhe o número (0 a 99)</h2>
+    <input type="number" id="guessInput" min="0" max="99">
+    <button onclick="checkGuess()">Enviar</button>
+    <div id="feedback"></div>
+  </div>
+
+  <script>
+    // gera número aleatório entre 0 e 99
+    const secretNumber = Math.floor(Math.random() * 100);
+
+    function checkGuess() {
+      const userGuess = parseInt(document.getElementById("guessInput").value);
+      const feedback = document.getElementById("feedback");
+
+      if (isNaN(userGuess)) {
+        feedback.textContent = "Digite um número válido!";
+        return;
+      }
+
+      if (userGuess === secretNumber) {
+        feedback.textContent = "🎉 Parabéns! Você acertou!";
+        feedback.style.setProperty("background-color", "lightgreen");
+      } else if (userGuess < secretNumber) {
+        feedback.textContent = "O número é maior!";
+        feedback.style.setProperty("background-color", "red");
+      } else {
+        feedback.textContent = "O número é menor!";
+        feedback.style.setProperty("background-color", "red");
+      }
+    }
+  </script>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+</body>
+</html>

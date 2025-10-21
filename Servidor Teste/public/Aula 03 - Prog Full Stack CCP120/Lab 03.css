@@ -1,0 +1,95 @@
+.imagemcmaismais {
+    width: 170px;
+    height: 170px;
+}
+
+.imagemjava{
+    width: 170px;
+    height: 170px;
+}
+
+.imagemcss{
+    width: 80px;
+    height: 80px;
+}
+
+.imagemhmtl{
+    width: 80px;
+    height: 80px;
+}
+
+.DivInit{
+    display: flex;
+    justify-content: space-around;
+    background-color: bisque;
+    border-style: solid;
+    border-color: rgb(4, 4, 170);
+
+}
+
+.CTexto{
+    color: #46810c;
+}
+
+.ItensMenu{
+display: flex;
+justify-content: center;
+background-color: rgb(88, 218, 218);
+align-items: center ;
+
+}
+
+.livro1{
+    width: 160px;
+    height: 240px;
+    ;
+}
+
+.livro2{
+    width: 180px;
+    height: 240px;
+}
+
+.livro3{
+    width: 160px;
+    height: 240px;
+}
+
+.DivLivros{
+    justify-content:space-evenly;
+    display: flex;
+    image-orientation: center;
+}
+
+.TextIntroducao{
+    text-align: center;
+}
+
+.HeadLivro{
+    text-align: center;
+}
+
+.TextosLivros{
+text-align: center;
+font-family: sans-serif;
+font-size: 12pt;
+color:blueviolet
+}
+
+.TextoAprenda{
+    text-align: center;
+}
+
+.LinksYT{
+    justify-content: space-evenly;
+    display: flex;
+    image-orientation: center;
+}
+
+.TextoContato{
+    text-align: center;
+}
+
+.DivTable{
+    border-style: dashed;
+}
