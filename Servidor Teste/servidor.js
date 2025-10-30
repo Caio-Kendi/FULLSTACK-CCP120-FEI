@@ -34,13 +34,30 @@ app.use(bodyParser.json())
 app.set('view engine', 'ejs')
 app.set('views', './views');
 
+// Rota para receber o POST do formulário de cadastro
+app.post('/Laboratorios/Laboratorios CCP120.html', (req, res) => {
+    const { usuario, email, senha } = req.body;
+  
+    console.log('Novo cadastro recebido:');
+    console.log('Usuário:', usuario);
+    console.log('Email:', email);
+    console.log('Senha:', senha);
+  
+    // Retorna uma resposta de sucesso (pode ser renderizando EJS ou HTML direto)
+    res.render('resposta', {
+      status: 'Cadastro realizado com sucesso!',
+      usuario: usuario
+    });
+  });
+  
+
 var server = http.createServer(app);
 server.listen(80);
 
 console.log('Servidor rodando ...'.rainbow);
 
 app.get('/', function (requisicao, resposta){
-resposta.redirect('home.html')
+resposta.redirect("/Laboratorios/LaboratoriosCCP120.html")
 })
 
 app.get('/inicio', function (requisicao, resposta){
